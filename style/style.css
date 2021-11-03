@@ -40,21 +40,6 @@
     outline-offset: .75rem;
 }
 
-#resetBtn {
-    /*flex-basis: 1;
-    flex-grow: 1;*/
-    min-width: 100px;
-    padding: 12px 20px;
-    border-width:1px;
-    border-radius: 8px;
-    background: khaki;
-    box-shadow: 3px 3px 0px 0px #C3B091;;
-    text-align: center;
-    font-size: 1.2em;
-    margin: 15px;
-    display: none;
-}
-
 #player1 {
     /*flex-basis: 1;
     flex-grow: 1;*/
@@ -106,6 +91,22 @@
     box-shadow: 3px 3px 0px 0px #C3B091;;
     text-align: center;
     font-size: 2em;
+    margin: 15px;
+}
+
+#resetBtn {
+    /*flex-basis: 1;
+    flex-grow: 1;*/
+    min-width: 100px;
+    padding: 21px 17px;
+    border-width:1px;
+    border-radius: 8px;
+    background: khaki;
+    box-shadow: 3px 3px 0px 0px #C3B091;;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 15px;
+    display: none;
 }
 
 img {
