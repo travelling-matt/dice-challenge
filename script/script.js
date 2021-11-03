@@ -1,39 +1,91 @@
-let i = 0
 let resetBtn = document.getElementById("resetBtn");
 let player1 = document.getElementById("player1");
 let score = document.getElementById("score");
 let dice = document.getElementById("dice");
 let rollBtn = document.getElementById("rollBtn");
-
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let four = document.getElementById("four");
+let five = document.getElementById("five");
+let six = document.getElementById("six");
+let i = 0
 
 document.addEventListener("keydown", (e) => {
+    one.style.display = "none";
+    two.style.display = "none";
+    three.style.display = "none";
+    four.style.display = "none";
+    five.style.display = "none";
+    six.style.display = "none";
     console.log(e);
     console.log(e.key);
     if (e.key == "r" || e.key == "R") {
         let j = Math.ceil(Math.random()*6);
         console.log(j)
         if (j == 1) {
-            player1.innerHTML = `<p>You lose :(<br>Press reset to try again</p>`;
-        } else if (j == 2) {        
-        dice.innerHTML = `<p>${j}</p>`;
+            player1.innerHTML = `<p>You lose :(<br>Press s or click 'start again' to try again</p>`;
+            one.style.display = "block";
+            rollBtn.style.visibility = "hidden";
+        } else if (j == 2) {      
+            two.style.display = "block";  
+        } else if (j == 3) {      
+            three.style.display = "block";  
+        } else if (j == 4) {      
+            four.style.display = "block";  
+        } else if (j == 5) {      
+            five.style.display = "block";  
+        } else if (j == 6) {      
+            six.style.display = "block";  
         }
     }
 });
 
-
-
-
-
-
-
-
-
-
 rollBtn.addEventListener("click", () => {
+    one.style.display = "none";
+    two.style.display = "none";
+    three.style.display = "none";
+    four.style.display = "none";
+    five.style.display = "none";
+    six.style.display = "none";
     let j = Math.ceil(Math.random()*6);
     console.log(j)
-    dice.innerHTML = `<p>${j}</p>`;
-    /*document.getElementById("boom").pause();
-    document.getElementById("boom").currentTime = 0;
-    document.getElementById("boom").play();*/
-})
+        if (j == 1) {
+            player1.innerHTML = `<p>You lose :(<br>Press s or click 'start again' to try again</p>`;
+            one.style.display = "block";            
+            rollBtn.style.visibility = "hidden";
+        } else if (j == 2) {      
+            two.style.display = "block";  
+        } else if (j == 3) {      
+            three.style.display = "block";  
+        } else if (j == 4) {      
+            four.style.display = "block";  
+        } else if (j == 5) {      
+            five.style.display = "block";  
+        } else if (j == 6) {      
+            six.style.display = "block";  
+        }
+    }
+)
+
+resetBtn.addEventListener("click", () => {
+    location.reload();    
+    }
+)
+document.addEventListener("keydown", (e) => {
+    if (e.key == "s" || e.key == "S") {
+        location.reload();
+    }
+});
+
+/*dice.innerHTML = `<p>${document.getElementById("two")}</p>`;*/
+
+/*button.addEventListener("click", () => {
+    if(image.style.display =="none"){
+    image.style.display = "block";
+    button.textContent = "hide";
+   } else {
+    image.style.display = "none";
+    button.textContent = "show"; 
+   }
+})*/
