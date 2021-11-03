@@ -69,7 +69,6 @@ rollBtn.addEventListener("click", () => {
             one.style.display = "block";
             rollBtn.style.display = "none";
             resetBtn.style.display = "block";
-            /*loser.style.display = "block"; */
             i = 0
         } else if (j == 2) {      
             two.style.display = "block";  
@@ -94,15 +93,3 @@ document.addEventListener("keydown", (e) => {
         location.reload();
     }
 });
-
-/*dice.innerHTML = `<p>${document.getElementById("two")}</p>`;*/
-
-/*button.addEventListener("click", () => {
-    if(image.style.display =="none"){
-    image.style.display = "block";
-    button.textContent = "hide";
-   } else {
-    image.style.display = "none";
-    button.textContent = "show"; 
-   }
-})*/
