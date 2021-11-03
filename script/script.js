@@ -11,7 +11,7 @@ let five = document.getElementById("five");
 let six = document.getElementById("six");
 let i = 0
 
-document.addEventListener("keydown", (e) => {
+/*document.addEventListener("keydown", (e) => {
     one.style.display = "none";
     two.style.display = "none";
     three.style.display = "none";
@@ -23,10 +23,14 @@ document.addEventListener("keydown", (e) => {
     if (e.key == "r" || e.key == "R") {
         let j = Math.ceil(Math.random()*6);
         console.log(j)
+        i = i + j
+        console.log(i)
+        score.innerHTML = `<p>${i}</p>`;
         if (j == 1) {
             player1.innerHTML = `<p>You lose :(<br>Press s or click 'start again' to try again</p>`;
             one.style.display = "block";
             rollBtn.style.visibility = "hidden";
+            i = 0
         } else if (j == 2) {      
             two.style.display = "block";  
         } else if (j == 3) {      
@@ -39,7 +43,7 @@ document.addEventListener("keydown", (e) => {
             six.style.display = "block";  
         }
     }
-});
+});*/
 
 rollBtn.addEventListener("click", () => {
     one.style.display = "none";
@@ -50,10 +54,14 @@ rollBtn.addEventListener("click", () => {
     six.style.display = "none";
     let j = Math.ceil(Math.random()*6);
     console.log(j)
+    i = i + j
+    console.log(i)
+    score.innerHTML = `<p>${i}</p>`;
         if (j == 1) {
             player1.innerHTML = `<p>You lose :(<br>Press s or click 'start again' to try again</p>`;
             one.style.display = "block";            
             rollBtn.style.visibility = "hidden";
+            i = 0
         } else if (j == 2) {      
             two.style.display = "block";  
         } else if (j == 3) {      
