@@ -52,6 +52,7 @@ rollBtn.addEventListener("click", () => {
     four.style.display = "none";
     five.style.display = "none";
     six.style.display = "none";
+    arrow.style.display = "none";
     let j = Math.ceil(Math.random()*6);
     console.log(j)
     i = i + j
@@ -61,12 +62,14 @@ rollBtn.addEventListener("click", () => {
             player1.innerHTML = `<p>Winner!!!</p>`;
             rollBtn.style.display = "none";
             resetBtn.style.display = "block";
+            winner.style.display = "block"; 
             i = 0
         } else if (j == 1) {
             player1.innerHTML = `<p>Loser :(</p>`;
             one.style.display = "block";
             rollBtn.style.display = "none";
             resetBtn.style.display = "block";
+            /*loser.style.display = "block"; */
             i = 0
         } else if (j == 2) {      
             two.style.display = "block";  
