@@ -52,6 +52,7 @@
     text-align: center;
     font-size: 1.2em;
     margin: 15px;
+    display: none;
 }
 
 #player1 {
@@ -65,7 +66,7 @@
     background: khaki;
     box-shadow: 3px 3px 0px 0px #C3B091;;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     margin: 15px;
 }
 

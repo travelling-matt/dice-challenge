@@ -57,10 +57,18 @@ rollBtn.addEventListener("click", () => {
     i = i + j
     console.log(i)
     score.innerHTML = `<p>${i}</p>`;
-        if (j == 1) {
-            player1.innerHTML = `<p>You lose :(<br>Press s or click 'start again' to try again</p>`;
+        if (i >= 21) {
+            player1.innerHTML = `<p>Winner!!!</p>`;
+            /*rollBtn.style.visibility = "hidden";*/
+            rollBtn.style.display = "none";
+            resetBtn.style.display = "block";
+            i = 0
+        } else if (j == 1) {
+            player1.innerHTML = `<p>Loser :(</p>`;
             one.style.display = "block";            
-            rollBtn.style.visibility = "hidden";
+            /*rollBtn.style.visibility = "hidden";*/
+            rollBtn.style.display = "none";
+            resetBtn.style.display = "block";
             i = 0
         } else if (j == 2) {      
             two.style.display = "block";  
